@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --red: #fc4747;
+    --dark-blue: #10141e;
+    --semi-dark-blue: #161d2f;
+    --white: #fff;
+    --greyish-blue: #5A698F;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+img {
+    max-width: 100%;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--semi-dark-blue);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .head {
+    margin-top: 80px;
+  }
+  
+  nav a {
+    font-weight: bold;
+    color: var(--greyish-blue);
+  }
+  
+  nav a.router-link-exact-active {
+    color: var(--white);
+  }
+  .fa-magnifying-glass {
+    font-size: 1.5em;
+  }
+
+  .searchBar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .searchBar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 18px;
+    width: 100%;
+    color: var(--white);
+    font-size: 18px;
+    font-family: 'Outfit';
+  }
+  .searchBar input:focus {
+    border-bottom: 1px solid var(--greyish-blue);
+  }
+  .searchBar input::placeholder {
+    color: var(--white);
+    font-family: 'Outfit';
+    font-size: 1em;
+    font-weight: 100;
+  }
+
+  h1 {
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: -0.31px;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 5px; 
+  }
+
+  .trendMovie {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.5rem;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+
+.trendMovie .iff .moviecards {
+  width: 250px;  
+}
+.trendMovie .iff .moviecards img {
+  border-radius: 20px;
+  aspect-ratio: 60 / 35;
+  object-fit: fill;
+}
+
+
+/* Horizontal Scrolling
+.trending::-webkit-scrollbar {
+    width: 2em;
+    height: 0.5em;
+  }
+  
+  .trending::-webkit-scrollbar-track {
+    background: var(--cursor-color);
+    border-radius: 100vw;
+    margin-block: 0.5em;
+  }
+  
+  .trending::-webkit-scrollbar-thumb {
+    background: var(--nav-color);
+    border-radius: 100vw;
+  }
+  
+  .trending::-webkit-scrollbar-thumb:hover {
+    background: var(--footer-color);
+    opacity: 0.5;
+  } */
